@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --Cyan: hsl(180, 62%, 55%);
+    --white:#fff;
+}
+*,*::after,*::before{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color:  #F9F9F8;
+}
+.parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 25px;
+}
+
+.container{
+    margin: 0 auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,minmax(200px,auto));
+
+}
+@media (max-width:768px) {
+    .container{
+       max-height:130vh;
+    }
+}
+.container .head h1{
+    font-weight: 600;
+    font-size: 30px;
+    color: var(--Very-Dark-Blue);
+}
+.container .head span{
+    font-weight: 200;
+    color: var(--Grayish-Blue);
+}
+.container .head p{
+    font-weight: 200;
+    color: var(--Grayish-Blue);
+    font-size: 15px;
+}
+.boxs{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(220px,300px));
+    grid-template-rows: minmax(300px,auto);
+    /* background: #000; */
+    grid-gap: 20px;
+}
+@media (max-width:768px){
+    .boxs{
+        grid-template-columns: repeat(1,minmax(auto,auto));
+        grid-template-rows: repeat(4,minmax(auto,auto));
+        justify-content: center;
+    }
+}
+.boxs p{
+    color: var(--Grayish-Blue);
+    font-size: 12px;
+    font-weight: 200;
+    text-align: left;
+}
+.boxs h2{
+    color: var(--Very-Dark-Blue);
+    font-weight: 400;
+    font-size: 18px;
+    text-align: left;
+}
+.boxs div{
+    border-radius: 5px;
+}
+.boxs img{
+    width: 45px;
+    margin-right: -150px;
+    margin-top: 50px;
+}
+@media (max-width:768px){
+    .boxs img{
+        margin-left: 80px;
+    }
+}
+.boxs .b1 .box1{
+    background-color: var(--Very-Light-Gray);
+    margin-top: 100px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    padding: 15px 15px 0 20px;
+}
+@media (max-width:768px){
+    .boxs .b1 {
+        margin-top: -25px;
+    }
+}
+
+.boxs .b1 .box1::before{
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background: var(--Cyan);
+    top: 0;
+    left: 0;
+}
+.boxs .box2{
+    background-color: var(--Very-Light-Gray);
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    padding: 15px 15px 0 20px;
+}
+@media (max-width:768px){
+    .boxs .box2{
+        margin: 25px 0;
+    }
+}
+.boxs .b2 .box2::before{
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background:var(--Red);
+    top: 0;
+    left: 0;
+}
+.boxs .box3{
+    background-color: var(--Very-Light-Gray);
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    padding: 15px 15px 0 20px;
+}
+@media (max-width:768px){
+    .boxs .box3{
+        margin: 45px 0;
+    }
+}
+.boxs .b2 .box3::before{
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background:var(--Orange);
+    top: 0;
+    left: 0;
+}
+.boxs .box4{
+    grid-column-start: 2;
+    background-color: var(--Very-Light-Gray);
+    margin-top: 100px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    padding: 15px 15px 0 20px;
+}
+.boxs .b3 .box4::before{
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background:var(--Blue);
+    top: 0;
+    left: 0;
+}
+@media (max-width:768px){
+    .boxs .b3 .box4{
+        margin-top: -18px;
+    }
+}
+.attribution {
+    font-size: 11px; text-align: center;
+    margin-top: 50px;
+ }
+ @media (max-width:768px){
+    .attribution{
+    display: none;    
+}
+ }
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
